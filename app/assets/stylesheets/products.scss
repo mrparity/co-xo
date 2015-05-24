@@ -1,3 +1,150 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// @import 'reset';
+
+@import 'color';
+@import 'font';
+
+body {
+  background-color: $background;
+  color: $text_primary;
+  font-family: $text;
+  font-size: $text-size;
+  line-height: 18px;
+}
+
+a {
+  color: $text_primary;
+  text-decoration: none;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: $text-size - 2;
+}
+
+p a {
+  color: $link_primary;
+  font-weight: bold;
+  text-decoration: none;
+  &:visited {
+    color: $link_primary;
+  }
+  &:hover {
+    color: $link_primary;
+    text-decoration: underline;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+.product-page {
+  width: 95%;
+  margin: auto;
+}
+
+.product-view {
+  position: relative;
+  width: 280px;
+  height: 500px;
+  padding: 10px;
+  margin: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $grey-lighten-1;
+  float: left;
+
+  &:hover {
+    background-color: $grey-lighten-2;
+  }
+
+  .product-name {
+    font-weight: bold;
+  }
+
+  .product-price {
+    color: $deep-orange-darken-4;
+    font-weight: bold;
+    float: right;
+  }
+
+  .product-price-before {
+    text-decoration: line-through;
+    font-size: $text-size-mini;
+    float: right;
+    padding-right: 15px;
+  }
+
+  .product-menu {
+    ul {
+      position: absolute;
+      border-width: 1px 0px 0px 0px;
+      border-color: $grey-lighten-1;
+      border-style: solid;
+      text-align:center;
+      padding-top: 5px;
+      padding-left: 0;
+      margin-left: 0;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+
+      li{
+        display: inline;
+        list-style-type: none;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+.product-grid-img {
+  width: 100%;
+}
+
+.product-grid-information {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    //font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: $text-size;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
