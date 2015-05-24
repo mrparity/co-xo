@@ -3,6 +3,7 @@ ruby "2.2.2"
 
 # Heroku gem dependency
 gem 'rails_12factor'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use SCSS for stylesheets
@@ -49,4 +50,5 @@ end
 group :production do
   # Use PostgreSQL as the database for Active Record on production/Heroku
   gem 'pg'
+  gem 'puma'
 end
