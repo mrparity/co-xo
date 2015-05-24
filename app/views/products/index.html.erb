@@ -2,21 +2,21 @@
 
 <div class="product-page">
   <% @products.each do |product| %>
-    <a href="http://google.de">
-      <div class="product-view">
-        <div><img src="<%= product.image_url %>" class="product-grid-img" /></div>
+    <div class="product-view">
+      <a href="http://google.de">
+        <div><img src="<%= product.image_url %>" class="product-grid-img" alt="<%= product.title %>"/></div>
         <div class="product-grid-information product-name"><%= product.title %></div>
         <div class="product-grid-information product-description"><%= product.description %></div>
         <div class="product-grid-information product-price"><%= product.price %> €</div>
         <div class="product-grid-information product-price-before"><%= (product.price * 1.36).round(2) %> €</div>
-        <div class="product-menu">
-          <ul>
-            <li><%= link_to 'Show', product %></li>
-            <li><%= link_to 'Edit', edit_product_path(product) %></li>
-            <li><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-          </ul>
-        </div>
+      </a>
+      <div class="product-menu">
+        <ul>
+          <li><%= link_to 'Show', product %></li>
+          <li><%= link_to 'Edit', edit_product_path(product) %></li>
+          <li><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        </ul>
       </div>
-    </a>
+    </div>
   <% end %>
 </div>
