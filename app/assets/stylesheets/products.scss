@@ -48,7 +48,7 @@ div {
 
 .product-page {
   width: 100%;
-  margin: auto;
+  text-align: center;
 }
 
 .product-view {
@@ -60,7 +60,7 @@ div {
   border-width: 1px;
   border-style: solid;
   border-color: $grey-lighten-1;
-  float: left;
+  display: inline-block;
 
   &:hover {
     background-color: $grey-lighten-2;
