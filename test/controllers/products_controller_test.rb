@@ -18,7 +18,13 @@ class ProductsControllerTest < ActionController::TestCase
 
   test "should create product" do
     assert_difference('Product.count') do
-      post :create, product: { description: @product.description, image_url: @product.image_url, price: @product.price, title: @product.title }
+      post :create, product: {
+        product_uid: '531171',
+        title: 'Relaxed',
+        description: 'Lorem ipsul',
+        image_url: 'http://lorempixel.com/500/700/nightlife/10/',
+        price: '33.95'
+      }
     end
 
     assert_redirected_to product_path(assigns(:product))
