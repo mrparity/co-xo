@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 ruby "2.2.2"
 
+# css Framework
+gem 'foundation-rails'
+
 # Heroku gem dependency
 gem 'rails_12factor'
 
