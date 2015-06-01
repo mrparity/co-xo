@@ -11,22 +11,77 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <ul class="tabs" data-tab>
+    <li class="tab-title active"><a href="#panel-basic">Basic</a></li>
+    <li class="tab-title"><a href="#panel2">Tab 2</a></li>
+    <li class="tab-title"><a href="#panel3">Tab 3</a></li>
+    <li class="tab-title"><a href="#panel4">Tab 4</a></li>
+  </ul>
+  <div class="row">
+    <div class="small-4 columns field">
+      <div class="small-3 columns">
+        <%= f.label :product_uid, :class=>'right inline' %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :product_uid %>
+      </div>
+    </div>
+    <div class="small-4 columns field">
+      <div class="small-3 columns">
+        <%= f.label :title, :class=>'right inline' %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :title %>
+      </div>
+    </div>
+    <div class="small-4 columns field">
+      <div class="small-3 columns">
+        <%= f.label :price, :class=>'right inline' %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :price %>
+      </div>
+
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+  <div class="row">
+    <div class="small-12 columns field">
+      <div class="small-1 columns">
+        <%= f.label :image_url, :class=>'right inline' %>
+      </div>
+      <div class="small-11 columns">
+        <%= f.text_field :image_url %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+  <div class="row">
+    <div class="small-12 columns field">
+      <div class="large-1 columns">
+        <%= f.label :description, :class=>'right inline' %>
+      </div>
+      <div class="large-11 columns">
+        <%= f.text_field :description %>
+      </div>
+    </div>
+
   </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
+  <div class="tabs-content">
+    <div class="content active" id="panel-basic">
+    </div>
+    <div class="content" id="panel2">
+      <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+    </div>
+    <div class="content" id="panel3">
+      <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+    </div>
+    <div class="content" id="panel4">
+      <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+    </div>
   </div>
+
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
