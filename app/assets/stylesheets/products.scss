@@ -6,45 +6,8 @@
 
 @import 'color';
 @import 'font';
-
-body {
-  background-color: $background;
-  color: $text_primary;
-  font-family: $text;
-  font-size: $text-size;
-  line-height: 18px;
-}
-
-a {
-  color: $text_primary;
-  text-decoration: none;
-  outline: 0px;
-}
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: $text-size - 2;
-}
-
-p a {
-  color: $link_primary;
-  font-weight: bold;
-  text-decoration: none;
-  &:visited {
-    color: $link_primary;
-  }
-  &:hover {
-    color: $link_primary;
-    text-decoration: underline;
-  }
-}
-
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
-}
+@import 'tabs';
+@import 'menu';
 
 .product-page {
   width: 100%;
